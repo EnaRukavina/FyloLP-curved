@@ -263,8 +263,10 @@
     border-radius: 6px;
     margin-right: 3rem;
     margin-bottom: 2rem;
+
     @include respond(tiny) {
       width: 100%;
+      margin-right: 0;
     }
 
     &:focus {
