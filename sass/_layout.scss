@@ -16,7 +16,7 @@
   background-color: $color-very-pale-blue;
 }
 .section-bg-curve-desktop {
-  width: 100vw;
+  width: 100%;
   &--top {
     position: relative;
     top: 1rem;
@@ -27,7 +27,7 @@
 }
 
 .section-bg-curve-mobile {
-  width: 100vw;
+  width: 100%;
 
   &--top {
     position: relative;
