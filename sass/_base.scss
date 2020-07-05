@@ -1,0 +1,96 @@
+//COLORS
+
+$color-primary: hsl(322, 100%, 66%);
+$color-very-dark-cyan: hsl(192, 100%, 9%);
+$color-very-pale-blue: hsl(207, 100%, 98%);
+$color-grey: #a7abae;
+
+//FONTS
+$font-headings: "Poppins", sans-serif;
+$font-primary: "Open Sans", sans-serif;
+
+//MEDIA QUERIES
+//MEDIA QUERY
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tiny {
+    @media only screen and (max-width: 28.12em) {
+      //540px
+      @content;
+    }
+  }
+  @if $breakpoint == smaller {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: 46.87em) {
+      //750px
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 90em) {
+      //1440px
+      @content;
+    }
+  }
+  @if $breakpoint == huge {
+    @media only screen and (min-width: 120em) {
+      //1920px
+      @content;
+    }
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem=10px
+
+  @include respond(small) {
+    font-size: 75%;
+  }
+
+  @include respond(large) {
+    font-size: 85%;
+  }
+
+  @include respond(huge) {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-headings;
+}

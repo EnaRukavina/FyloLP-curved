@@ -1,0 +1,291 @@
+.padding {
+  padding: 5rem;
+  @include respond(smaller) {
+    padding: 2rem;
+  }
+}
+
+//TYPOGRAPHY
+.heading-3 {
+  font-size: 2rem;
+}
+
+//BG CURVES
+
+.section-bg {
+  background-color: $color-very-pale-blue;
+}
+.section-bg-curve-desktop {
+  width: 100vw;
+  &--top {
+    position: relative;
+    top: 1rem;
+  }
+  @media only screen and(max-width:46.87rem) {
+    display: none;
+  }
+}
+
+.section-bg-curve-mobile {
+  width: 100vw;
+
+  &--top {
+    position: relative;
+    top: 1rem;
+  }
+
+  @media only screen and(min-width:46.87rem) {
+    display: none;
+  }
+}
+
+//HEADER
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(smaller) {
+    margin-bottom: 8rem;
+  }
+  @include respond(tiny) {
+    flex-direction: column;
+  }
+
+  &__logo {
+    max-width: 20rem;
+    @include respond(smaller) {
+      max-width: 15rem;
+    }
+    @include respond(tiny) {
+      margin-bottom: 5rem;
+      max-width: 25rem;
+    }
+  }
+}
+
+//SECTION 1
+
+.section-1 {
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  &__paragraph {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 3rem;
+
+    @include respond(medium) {
+      width: 80%;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 80%;
+    margin: 7rem auto;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+
+    @include respond(small) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stats {
+      &__number {
+        font-size: 8rem;
+        font-weight: 700;
+        @include respond(small) {
+          font-size: 5rem;
+        }
+      }
+
+      &__text {
+        font-size: 2.2rem;
+        color: $color-grey;
+        @include respond(small) {
+          font-size: 1.5rem;
+          margin-bottom: 5rem;
+        }
+      }
+
+      &__icon {
+        @include respond(small) {
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+
+//3 MAIN SECTIONS
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  @include respond(small) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.section-reverse {
+  @include respond(small) {
+    flex-direction: column-reverse;
+  }
+}
+
+.sections {
+  &__text {
+    max-width: 50%;
+    @include respond(small) {
+      max-width: 100%;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    max-width: 50%;
+    @include respond(small) {
+      max-width: 100%;
+      margin-bottom: 8rem;
+    }
+
+    img {
+      max-width: 30rem;
+
+      @include respond(tiny) {
+        max-width: 20rem;
+      }
+    }
+  }
+}
+
+//READY TO BUILD SECTION
+
+.ready {
+  text-align: center;
+  padding: 10rem;
+  padding-top: 0;
+
+  @include respond(smaller) {
+    padding: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  &__heading {
+    padding: 5rem 0;
+  }
+}
+
+//FOOTER
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-very-dark-cyan;
+  color: white;
+  font-size: 1.2rem;
+
+  @include respond(small) {
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    width: 30%;
+    @include respond(small) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 40%;
+    @include respond(small) {
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    max-width: 20rem;
+    margin-bottom: 2rem;
+    @include respond(small) {
+      margin-top: 7rem;
+    }
+  }
+  &__contact {
+    display: flex;
+    margin: 2rem 0;
+    &__icon {
+      margin-right: 1rem;
+    }
+  }
+  &__social-icons {
+    margin-top: 6rem;
+  }
+  &__social-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  &__heading {
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    font-family: $font-primary;
+    font-weight: 600;
+  }
+
+  &__paragraph {
+    padding-right: 10rem;
+    margin-bottom: 2rem;
+    @include respond(small) {
+      padding-right: 0;
+    }
+  }
+
+  &__form {
+    border: none;
+    padding: 1rem 0;
+    width: 25rem;
+    border-radius: 6px;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    @include respond(tiny) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  background-color: $color-very-dark-cyan;
+  color: white;
+  padding: 3rem 0;
+  letter-spacing: 0.5px;
+}
+.attribution a {
+  text-transform: uppercase;
+  color: $color-very-pale-blue;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
